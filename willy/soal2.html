@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 2</title>
+</head>
+
+<body>
+    <h1>DERET FIBONACI</h1>
+    Masukan angka: <input type="number" placeholder="masukkan angka" id="angka">
+    <br><br>
+    <input type="button" value="SHOW" onclick="onShowClick()">
+    <input type="button" value="GANJIL" onclick="onGanjilClick()">
+    <input type="button" value="GENAP" onclick="onGenapClick()">
+    <br><br>
+    <h2>RESULT:</h2>
+    <div id="printData">
+
+    </div>
+</body>
+<script>
+
+    function onShowClick() {
+        let angka = document.getElementById('angka').value
+        var result = fibo(angka)
+        document.getElementById('printData').innerHTML = result
+    }
+
+    function onGanjilClick() {
+
+    }
+
+    function onGenapClick() {
+
+    }
+
+    function fibo(angka) {
+        let a = 1
+        let b = 0
+        let temp;
+
+        while (angka > 0) {
+            temp = a
+            a = a + b
+            b = temp
+            angka--
+        }
+        return b;
+    }
+</script>
+
+</html>

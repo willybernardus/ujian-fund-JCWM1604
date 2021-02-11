@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 1</title>
+</head>
+
+<body>
+    <h1>PATTERN</h1>
+    <input type="number" placeholder="masukkan angka" id="angka"><br><br>
+    <input type="button" value="GANJIL" onclick="onGanjilClick()">&nbsp; &nbsp;<input type="button" value="HURUF"
+        onclick="onHurufClick()">
+    <div id="renderData">
+
+    </div>
+</body>
+<script>
+    function segitigaGanjil(angka) {
+        let bintangGanjil = ''
+
+        for (let i = 0; i < angka; i++) {
+            for (let j = 0; j <= i; j++) {
+                bintangGanjil += '3' + '&nbsp;&nbsp;'
+            }
+            bintangGanjil += '<br>'
+        }
+        return bintangGanjil
+    }
+
+    function segitigaHuruf(angka) {
+        let bintangHuruf = ''
+        var huruf = 'abcdefghijklmnopqrstuvwxyz'.toUpperCase().split('')
+        for (let i = 0; i < angka; i++) {
+            for (let j = 0; j <= i; j++) {
+                bintangHuruf += 'A' + + '&nbsp;&nbsp;'
+            }
+            bintangHuruf += '<br>'
+        }
+        return bintangHuruf
+    }
+
+    function onGanjilClick() {
+        var angka = document.getElementById('angka').value
+        var result = segitigaGanjil(angka)
+        document.getElementById('renderData').innerHTML = result
+    }
+
+    function onHurufClick() {
+        var angka = document.getElementById('angka').value
+        var result = segitigaHuruf(angka)
+        document.getElementById('renderData').innerHTML = result
+    }
+
+</script>
+
+</html>

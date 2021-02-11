@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 3</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form action="">
+        <h1>FORM USERS</h1>
+        <br><br>
+        <input type="text" placeholder="username" id="inputnama">
+        <input type="text" placeholder="email" id="inputemail">
+        <select name="" id="inputrole">
+            <option value="" hidden>Role</option>
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+        </select>
+        <br><br>
+        <input type="button" value="ADD USER" onclick="submitData()">
+    </form>
+    <br>
+    <h1>USERS DATA</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>NO</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="renderData">
+
+        </tbody>
+    </table>
+
+</body>
+<script src="/willy/code3.js"></script>
+
+</html>
